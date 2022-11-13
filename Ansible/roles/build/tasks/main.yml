@@ -1,8 +1,8 @@
 ---
 # tasks file for build
----
 #buidproject
 - name: install dep
   shell: npm install --save --legacy-peer-deps
-- name: build app
-  shell: ng build 
+- name: build myapp
+  shell: ng build --configuration production
+    
