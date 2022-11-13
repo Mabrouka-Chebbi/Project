@@ -1,0 +1,8 @@
+---
+# tasks file for docker-registry
+- name: Login Dockerhub
+  docker_login:
+    username: "mabroukach"
+    password: "123456789"
+- name: Push to DockerHub
+  shell: docker push magnum3016/devops:latest
