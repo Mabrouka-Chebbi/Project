@@ -4,5 +4,9 @@
   docker_login:
     username: "mabroukach"
     password: "123456789"
-- name: Push to DockerHub
-  shell: docker push magnum3016/devops:latest
+- name: push to dockerhub
+  docker_image:
+    name: appfront:latest
+    repository: mabroukach/cd
+    push: yes
+    source: local
