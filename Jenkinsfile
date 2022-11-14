@@ -24,14 +24,14 @@ pipeline {
        stage('docker'){
             steps{
                 script{
-                    echo "hello"
+                    sh "python3 --version"
                 }
             }
         }
         stage('docker-registry'){
             steps{
                 script{
-                    echo "hello"
+                    sh "python3 --version"
                 }
             }
         }
