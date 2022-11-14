@@ -21,17 +21,17 @@ pipeline {
             }
         }
 
-       stage('docker'){
+  stage('docker'){
             steps{
                 script{
-                    sh "python3 --version"
+                    sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml"
                 }
             }
         }
-        stage('docker-registry'){
+   stage('docker-registry'){
             steps{
                 script{
-                    sh "python3 --version"
+                    sh "ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yml"
                 }
             }
         }
